@@ -2,7 +2,7 @@
 from distutils.core import setup
 from distutils.command.install import INSTALL_SCHEMES
 import os
-import adminfilters as app
+import ichangelist as app
 
 NAME = app.NAME
 RELEASE = app.get_version()
@@ -50,7 +50,7 @@ def scan_dir(target, packages=[], data_files=[]):
             data_files.append([dirpath, [os.path.join(dirpath, f) for f in filenames]])
     return packages, data_files
 
-packages, data_files = scan_dir('adminfilters')
+packages, data_files = scan_dir('ichangelist')
 
 setup(
     name=NAME,
